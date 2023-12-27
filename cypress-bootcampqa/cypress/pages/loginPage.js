@@ -3,7 +3,8 @@ class LoginPage {
     userInput: () => cy.get("#username").first(),
     passwordInput: () => cy.get('#password').first(),
     sendButton: () => cy.get('#loginbtn'),
-    successMessage: () => cy.get('.usertext')
+    successMessage: () => cy.get('.usertext'),
+    errorMessage: () => cy.get('.alert-danger')
   };
 
   typeUser(user) {

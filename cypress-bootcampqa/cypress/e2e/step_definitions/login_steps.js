@@ -21,3 +21,7 @@ import {
   Then("the user with name {string} is logged in", (name) => {
     loginPage.elements.successMessage().should("have.text", name);
   });
+
+  Then("the user sees an error message", () => {
+    loginPage.elements.errorMessage().should("have.text", "Acceso inválido. Por favor, inténtelo otra vez.");
+  });
