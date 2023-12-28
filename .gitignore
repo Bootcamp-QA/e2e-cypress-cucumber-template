@@ -50,3 +50,5 @@ Thumbs.db
 
 # Cucumber Report
 reports
+jsonlogs/log.json
+cucumber-report.html
