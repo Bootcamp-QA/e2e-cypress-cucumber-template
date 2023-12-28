@@ -20,6 +20,11 @@ jobs:
           command: npm run cypress:execution
           record: true
           parallel: false
+      - name: Publish test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: cucumber-report
+          path: cucumber-report.html
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
