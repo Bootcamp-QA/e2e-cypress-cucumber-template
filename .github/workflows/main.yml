@@ -1,6 +1,6 @@
 name: Cypress Tests
 
-on: [fork]
+on: [push]
 
 jobs:
   cypress-run:
