@@ -1,6 +1,6 @@
 name: Cypress Tests
 
-on: [push]
+on: [fork]
 
 jobs:
   cypress-run:
@@ -27,7 +27,7 @@ jobs:
         with:
           name: cucumber-report-desktop
           path: cucumber-report.html
-          compression-level: 0
+          retention-days: 100
       - name: Cypress run e2e Mobile
         uses: cypress-io/github-action@v6
         with:
@@ -43,5 +43,5 @@ jobs:
         with:
           name: cucumber-report-mobile
           path: cucumber-report.html
-          compression-level: 0
+          retention-days: 100
         
