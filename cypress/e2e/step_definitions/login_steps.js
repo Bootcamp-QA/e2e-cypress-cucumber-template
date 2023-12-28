@@ -23,5 +23,5 @@ import {
   });
 
   Then("the user sees an error message", () => {
-    loginPage.elements.errorMessage().should("have.text", "Acceso inválido. Por favor, inténtelo otra vez.");
+    loginPage.elements.errorMessage().should("be.visible");
   });

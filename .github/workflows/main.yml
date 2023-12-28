@@ -8,22 +8,36 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        containers: [1] # Uses no parallel instances
+        containers: [1,2]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Cypress run
+      - name: Cypress run e2e Desktop
         uses: cypress-io/github-action@v6
         with:
-          command: npm run cypress:execution
+          command: npm run e2e-desktop-ci
           record: true
-          parallel: false
+          parallel: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish test results
         uses: actions/upload-artifact@v3
         with:
-          name: cucumber-report
+          name: cucumber-report-desktop
+          path: cucumber-report.html
+      - name: Cypress run e2e Mobile
+        uses: cypress-io/github-action@v6
+        with:
+          command: npm run e2e-mobile-ci
+          record: true
+          parallel: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish test results mobile
+        uses: actions/upload-artifact@v3
+        with:
+          name: cucumber-report-mobile
           path: cucumber-report.html
         
