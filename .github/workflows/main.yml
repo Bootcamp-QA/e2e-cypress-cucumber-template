@@ -21,7 +21,7 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COMMIT_INFO_MESSAGE: E2E Desktop - ${{github.event.pull_request.title}}
+          COMMIT_INFO_MESSAGE: E2E Desktop - ${{github.event.head_commit.message}}
       - name: Publish test results
         uses: actions/upload-artifact@v3
         with:
@@ -37,7 +37,7 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COMMIT_INFO_MESSAGE: E2E Mobile - ${{github.event.pull_request.title}}
+          COMMIT_INFO_MESSAGE: E2E Mobile - ${{github.event.head_commit.message}}
       - name: Publish test results mobile
         uses: actions/upload-artifact@v3
         with:
