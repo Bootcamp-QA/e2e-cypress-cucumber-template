@@ -21,13 +21,12 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COMMIT_INFO_MESSAGE: E2E Desktop - ${{github.event.head_commit.message}}
+          COMMIT_INFO_MESSAGE: E2E Mobile ${{ CYPRESS_CI_BUILD_URL }}
       - name: Publish test results
         uses: actions/upload-artifact@v3
         with:
           name: cucumber-report-desktop
           path: cucumber-report.html
-          retention-days: 100
       - name: Cypress run e2e Mobile
         uses: cypress-io/github-action@v6
         with:
@@ -37,11 +36,10 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COMMIT_INFO_MESSAGE: E2E Mobile - ${{github.event.head_commit.message}}
+          COMMIT_INFO_MESSAGE: E2E Mobile ${{ CYPRESS_CI_BUILD_URL }}
       - name: Publish test results mobile
         uses: actions/upload-artifact@v3
         with:
           name: cucumber-report-mobile
           path: cucumber-report.html
-          retention-days: 100
         
