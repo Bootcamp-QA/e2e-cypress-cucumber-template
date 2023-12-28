@@ -4,13 +4,9 @@
 
 > Cypress with Cucumber boilerplate project.
 
-### 💻 Topics
+### 💻 Description
+E2e tests for https:bootcampqa.com
 
-Integrated with:
-
-- [x] https://github.com/badeball/cypress-cucumber-preprocessor
-- [x] https://github.com/bahmutov/cypress-esbuild-preprocessor
-- [x] https://www.npmjs.com/package/multiple-cucumber-html-reporter
 
 - ## 💻 Pre-requisites
 
@@ -20,11 +16,12 @@ Integrated with:
 
 Install project dependencies with: npm i
 
-## Run the demo:
-1. Standard Execution in local: npm run cypress:runner
-   4. You'll get a report like this one: GitHub Page - Allure Report Sample: https://joanesquivel.github.io/cypress-cucumber-boilerplate/
+## Run tests in local:
+1. Run test on desktop: npm run e2e-desktop
+2. Run test on mobile: npm run e2e-mobile
 
 
-##  Sample repo to generate an allure report as an artifact using GH Actions
+##  Sample repo to run test on CI with GH Actions
 
-* https://github.com/SeyiOG/newCyLearn2/blob/main/.github/workflows/cypress-allure-report.yml
+* See test results on Cypress Cloud: https://cloud.cypress.io/projects/438j27/runs
+* Run tests on CI: https://github.com/Bootcamp-QA/cypress-bootcampqa/actions/workflows/main.yml
