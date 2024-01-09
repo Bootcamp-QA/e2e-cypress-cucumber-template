@@ -16,12 +16,12 @@ JIRA PROJECT (ACCESS REQUIRED): https://mybootcampqa.atlassian.net/jira/software
 
 ## 🚀 Install the project
 With Visual Studio Code:
-1. Download the GIT project
+1. Download the Project (Download Zip File) or Download from github with visual studio extension.
 2. Open the project in visual studio
-3. Install dependencies in terminal: npm i
+3. Install dependencies in visual studio terminal: npm i
 
 With Command line:
-Download the GIT project
+Download the project (Download Zip File)
 Open the project folder in a terminal: cd cypress-bootcampqa
 Execute node comand in a terminal: npm i
 
