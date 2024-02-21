@@ -2,7 +2,7 @@
 
 <img src="https://bootcampqa.com/images/logo-black.png" alt="Bootcamp QA Logo">
 
-> Cypress with Cucumber boilerplate project.
+> Cypress with Cucumber example project.
 
 ### 💻 Description
 E2e tests for https://bootcampqa.com
