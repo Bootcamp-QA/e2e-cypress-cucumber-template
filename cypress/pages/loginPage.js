@@ -9,7 +9,6 @@ class LoginPage {
 
   typeUser(user) {
     this.elements.userInput().type(user);
-    something;
   }
 
   typePassword(password) {
