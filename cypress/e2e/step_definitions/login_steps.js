@@ -3,7 +3,6 @@ import {
     When,
     Then,
   } from "@badeball/cypress-cucumber-preprocessor";
-  import {loginPage} from '@pages/loginPage'
   
 
   Given("the user is at bootcamp qa login page", () => {
