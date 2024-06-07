@@ -1,5 +1,5 @@
 #Base image taken from:https://hub.docker.com/r/cypress/browsers/tags
-FROM cypress/browsers:node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
+FROM cypress/browsers:latest
 #Create the folder where our project will be stored
 RUN mkdir /cucumberproject
 #We make it our workdirectory
