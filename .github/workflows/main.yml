@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install Dependencies
+        uses: cypress-io/github-action@v6
+        with:
+          command: npm install
       - name: Cypress run e2e Desktop
         uses: cypress-io/github-action@v6
         with:
@@ -38,7 +42,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_INFO_MESSAGE: Cypress E2E Mobile
       - name: Publish test results mobile
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cucumber-report-mobile
           path: cucumber-report.html
