@@ -3,6 +3,8 @@ import {
     When,
     Then,
   } from "@badeball/cypress-cucumber-preprocessor";
+  import {loginPage} from '@pages/loginPage'
+  
 
   Given("the user is at bootcamp qa login page", () => {
     cy.visit("/");
@@ -12,15 +14,14 @@ import {
   });
   
   When("the user login with user {string} and password {string}", (user,password) => {
-    cy.get("#username").first().userInput().type(user);
-    cy.get('#password').first().passwordInput().type(password);
-    cy.get('#loginbtn').first().click();
+    loginPage.fillForm(user,password);
+    loginPage.sendForm();
   });
   
   Then("the user with name {string} is logged in", (name) => {
-    cy.get('.usertext').should("have.text", name);
+    loginPage.elements.successMessage().should("have.text", name);
   });
 
   Then("the user sees an error message", () => {
-    cy.get('.alert-danger').should("be.visible");
+    loginPage.elements.errorMessage().should("be.visible");
   });
