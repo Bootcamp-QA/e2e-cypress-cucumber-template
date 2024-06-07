@@ -7,9 +7,7 @@
     "e2e-desktop": "cypress open --e2e --browser chrome",
     "e2e-mobile": "cypress open --e2e --config viewportWidth=375,viewportHeight=667",
     "e2e-desktop-ci": "cypress run --spec cypress/e2e/features/* --record",
-    "e2e-mobile-ci": "cypress run --spec cypress/e2e/features/* --config viewportWidth=375,viewportHeight=667 --record",
-    
-    "allure:history": "mv -f allure-report/history allure-results/history && rm -r allure-report || true"
+    "e2e-mobile-ci": "cypress run --spec cypress/e2e/features/* --config viewportWidth=375,viewportHeight=667 --record"
   },
   "keywords": [
     "cypress"
@@ -17,10 +15,10 @@
   "author": "cucumber",
   "license": "ISC",
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
-    "multiple-cucumber-html-reporter": "^3.6.0",
-    "cypress": "^13.6.2",
-    "esbuild": "^0.17.0"
+    "@badeball/cypress-cucumber-preprocessor": "latest",
+    "@bahmutov/cypress-esbuild-preprocessor": "latest",
+    "multiple-cucumber-html-reporter": "latest",
+    "cypress": "latest",
+    "esbuild": "latest"
   }
 }
