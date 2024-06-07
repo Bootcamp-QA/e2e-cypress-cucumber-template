@@ -14,14 +14,16 @@ import {
   });
   
   When("the user login with user {string} and password {string}", (user,password) => {
-    loginPage.fillForm(user,password);
-    loginPage.sendForm();
+    cy.get("#username").first().type(user);
+    cy.get('#password').first().type(password);
+    cy.get('#loginbtn').click();
+
   });
   
   Then("the user with name {string} is logged in", (name) => {
-    loginPage.elements.successMessage().should("have.text", name);
+    cy.get('.usertext').should("have.text", name);
   });
 
   Then("the user sees an error message", () => {
-    loginPage.elements.errorMessage().should("be.visible");
+    cy.get('.alert-danger').should("be.visible");
   });

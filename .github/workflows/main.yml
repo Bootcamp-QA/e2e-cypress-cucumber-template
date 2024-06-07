@@ -15,10 +15,6 @@ jobs:
       - name: Install Dependencies
         uses: cypress-io/github-action@v6
         with:
-          command: npm install
-      - name: Cypress run e2e Desktop
-        uses: cypress-io/github-action@v6
-        with:
           command: npm run e2e-desktop-ci
           record: true
           parallel: true
