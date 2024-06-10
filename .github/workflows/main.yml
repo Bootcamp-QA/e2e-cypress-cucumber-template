@@ -8,10 +8,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        containers: [1]
+        containers: [1,2,3]
     steps:
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Run E2E Tests Desktop
         uses: cypress-io/github-action@v6
         with:
@@ -22,11 +28,14 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_INFO_MESSAGE: Cypress E2E Desktop
-      - name: Publish test results
+
+      - name: Publish Desktop Test results
         uses: actions/upload-artifact@v4
         with:
           name: cucumber-report-desktop
           path: cucumber-report.html
+
+
       - name: Cypress run e2e Mobile
         uses: cypress-io/github-action@v6
         with:
@@ -37,7 +46,8 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_INFO_MESSAGE: Cypress E2E Mobile
-      - name: Publish test results mobile
+
+      - name: Publish mobile test results
         uses: actions/upload-artifact@v4
         with:
           name: cucumber-report-mobile

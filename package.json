@@ -12,7 +12,7 @@
   "keywords": [
     "cypress"
   ],
-  "author": "cucumber",
+  "author": "Reyes Cuesta",
   "license": "ISC",
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "latest",
