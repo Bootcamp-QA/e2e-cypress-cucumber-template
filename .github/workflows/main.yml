@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        containers: [1,2,3]
+        containers: [1]
     steps:
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -17,9 +17,6 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install dependencies
-        run: npm install
 
       - name: Run E2E Tests Desktop
         uses: cypress-io/github-action@v6
