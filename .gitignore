@@ -52,3 +52,4 @@ Thumbs.db
 reports
 jsonlogs/log.json
 cucumber-report.html
+package-lock.json
