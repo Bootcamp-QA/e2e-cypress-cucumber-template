@@ -15,10 +15,10 @@
   "author": "Reyes Cuesta",
   "license": "ISC",
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "latest",
-    "@bahmutov/cypress-esbuild-preprocessor": "latest",
-    "multiple-cucumber-html-reporter": "latest",
-    "cypress": "latest",
-    "esbuild": "latest"
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.6",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "multiple-cucumber-html-reporter": "^3.6.2",
+    "cypress": "^13.6.3",
+    "esbuild": "^0.21.5"
   }
 }
