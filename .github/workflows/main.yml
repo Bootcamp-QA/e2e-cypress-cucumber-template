@@ -3,18 +3,15 @@ name: Cypress Tests
 on:
   push: 
     branches: 
-      - main  # Ejecuta el Workflow cuando hagas cambios 
+      - main  # Ejecuta el flujo de trabajo cuando hay cambios en la rama principal
   schedule: 
-    - cron: '0 0 * * 0'  # Formato: Minuto Hora Dia (* todos) Mes Dia de la Semana (0 domingo)
-  workflow_dispatch:  # Permite disparar el flujo de trabajo manualmente
+    - cron: '0 0 * * 0'  # Ejecuta el flujo de trabajo a medianoche (UTC) todos los domingos
+  workflow_dispatch:  # Permite ejecutar el flujo de trabajo manualmente
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        containers: [1]
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,11 +30,9 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install Dependencies
-        id: install-dependencies
         run: npm install
 
       - name: Run E2E Tests Desktop
-        id: e2e-desktop
         uses: cypress-io/github-action@v6
         with:
           command: npm run e2e-desktop-ci
@@ -56,7 +51,6 @@ jobs:
           path: cucumber-report.html
 
       - name: Run E2E Tests Mobile
-        id: e2e-mobile
         if: always()
         uses: cypress-io/github-action@v6
         with:
@@ -74,4 +68,4 @@ jobs:
         with:
           name: cucumber-report-mobile
           path: cucumber-report.html
-        
+
