@@ -1,19 +1,8 @@
-Feature: Login Bootcamp QA
+Feature: Open Bootcamp QA
 
-    As studen, I want to login bootcamp qa, so I can see training courses
+    As studen, I want to open bootcamp qa, so I can see training courses
 
-    Background:
-        Given the user is at bootcamp qa login page
 
-    Scenario: Success Login
-        When the user login with user "testqa" and password "Password-qa1"
-        Then the user with name "Test QA" is logged in
-
-    Scenario Outline: Error Login
-        When the user login with user <user> and password <password>
-        Then the user sees an error message
-
-    Examples:
-        | user | password |
-        | "testqa" | "invalid" |
-        | "invalid" | "Password-qa1" |
+    Scenario: Visit Bootcamp QA Web
+        When the user visits homepage
+        Then they should see the title "Bootcamp QA"

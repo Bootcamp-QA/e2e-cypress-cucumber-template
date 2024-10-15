@@ -15,7 +15,7 @@ E2e tests for https://bootcampqa.com
 ## 🚀 Install the project
 1. Open the project in Visual Studio Code
 2. Open the project in visual studio
-3. Install dependencies in visual studio terminal: npm i
+3. Install dependencies in visual studio terminal: npm install
 
 
 ## Run tests in local:

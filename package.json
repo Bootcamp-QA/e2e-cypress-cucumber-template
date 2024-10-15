@@ -18,7 +18,7 @@
     "@badeball/cypress-cucumber-preprocessor": "^20.0.6",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "multiple-cucumber-html-reporter": "^3.6.2",
-    "cypress": "^13.6.3",
+    "cypress": "^13.8.0",
     "esbuild": "^0.21.5"
   }
 }
