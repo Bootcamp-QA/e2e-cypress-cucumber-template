@@ -1,6 +1,12 @@
 name: Cypress Tests
 
-on: [workflow_dispatch]
+on:
+  push: 
+    branches: 
+      - main  # Ejecuta el Workflow cuando hagas cambios 
+  schedule: 
+    - cron: '0 0 * * 0'  # Formato: Minuto Hora Dia (* todos) Mes Dia de la Semana (0 domingo)
+  workflow_dispatch:  # Permite disparar el flujo de trabajo manualmente
 
 jobs:
   cypress-run:
