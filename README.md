@@ -1,11 +1,23 @@
-# cypress-bootampqa
+# Bootcamp QA Cypress E2E Template Project
 
-<img src="https://bootcampqa.com/images/logo-black.png" alt="Bootcamp QA Logo">
+<p align="center">
+  <img src="https://bootcampqa.com/images/logo-black.png" alt="Bootcamp QA Logo" width="300">
+</p>
 
-> Javascript, Cypress with Cucumber example project.
+> A template project using **Cucumber**, **Cypress**, and **JavaScript** for automated end-to-end (E2E) testing.
 
 ### 💻 Description
-E2e tests for https://bootcampqa.com
+This project is designed to perform end-to-end (E2E) tests for the [Bootcamp QA website](https://bootcampqa.com). It automates testing across both desktop and mobile browsers to ensure a high-quality user experience. The tests are executed weekly as part of a continuous integration (CI) pipeline to detect issues early.
+
+These tests cover key user flows and functionalities, validating the website’s reliability and performance. 
+
+You can view the latest test results on [Cypress Cloud](https://cloud.cypress.io/projects/438j27/runs).
+
+
+### 🛠️ Technologies Used
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+- ![Cypress](https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
+- ![Cucumber](https://img.shields.io/badge/Cucumber-23D96C?style=for-the-badge&logo=cucumber&logoColor=white)
 
 - ## 💻 Pre-requisites
 
@@ -14,8 +26,7 @@ E2e tests for https://bootcampqa.com
 
 ## 🚀 Install the project
 1. Open the project in Visual Studio Code
-2. Open the project in visual studio
-3. Install dependencies in visual studio terminal: npm install
+2. Install dependencies in visual studio terminal: npm install
 
 
 ## Run tests in local:
@@ -24,5 +35,5 @@ E2e tests for https://bootcampqa.com
 
 
 ##  Run tests on CI with github Actions:
-1. Run tests on CI: https://github.com/Bootcamp-QA/cypress-bootcampqa/actions/workflows/main.yml
-2. See test results on Cypress Cloud: https://cloud.cypress.io/projects/438j27/runs
+1. Run tests on CI (Needs permisions): https://github.com/Bootcamp-QA/cypress-bootcampqa/actions/workflows/main.yml
+

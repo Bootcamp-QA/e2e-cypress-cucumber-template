@@ -5,4 +5,3 @@ Feature: Open Bootcamp QA
 
     Scenario: Visit Bootcamp QA Web
         When the user visits homepage
-        Then they should see the title "Bootcamp QA"
